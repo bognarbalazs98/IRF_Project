@@ -16,5 +16,7 @@ namespace IrfProject_ko64zx
         {
             InitializeComponent();
         }
+
+       
     }
 }
