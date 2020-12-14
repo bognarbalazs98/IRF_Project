@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="QuizDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Eredmeny">
+          <Key>
+            <PropertyRef Name="Eredmeny_Id" />
+          </Key>
+          <Property Name="Eredmeny_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Jatekos_nev" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Eredmeny" Type="numeric" Precision="3" Scale="2" />
+          <Property Name="Datum" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Kerdes">
+          <Key>
+            <PropertyRef Name="Kerdes_Id" />
+          </Key>
+          <Property Name="Kerdes_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Kerdes" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Valasz_1" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Valasz_2" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Valasz_3" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Valasz_4" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Helyes_valasz" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="QuizDatabaseModelStoreContainer">
+          <EntitySet Name="Eredmeny" EntityType="Self.Eredmeny" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Kerdes" EntityType="Self.Kerdes" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QuizDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Eredmeny">
+          <Key>
+            <PropertyRef Name="Eredmeny_Id" />
+          </Key>
+          <Property Name="Eredmeny_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Jatekos_nev" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Eredmeny1" Type="Decimal" Precision="3" Scale="2" />
+          <Property Name="Datum" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="QuizDatabaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Eredmeny" EntityType="Self.Eredmeny" />
+          <EntitySet Name="Kerdes" EntityType="QuizDatabaseModel.Kerdes" />
+        </EntityContainer>
+        <EntityType Name="Kerdes">
+          <Key>
+            <PropertyRef Name="Kerdes_Id" />
+          </Key>
+          <Property Name="Kerdes_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Kerdes1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Valasz_1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Valasz_2" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Valasz_3" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Valasz_4" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Helyes_valasz" Type="Int32" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QuizDatabaseModelStoreContainer" CdmEntityContainer="QuizDatabaseEntities">
+          <EntitySetMapping Name="Eredmeny">
+            <EntityTypeMapping TypeName="QuizDatabaseModel.Eredmeny">
+              <MappingFragment StoreEntitySet="Eredmeny">
+                <ScalarProperty Name="Eredmeny_Id" ColumnName="Eredmeny_Id" />
+                <ScalarProperty Name="Jatekos_nev" ColumnName="Jatekos_nev" />
+                <ScalarProperty Name="Eredmeny1" ColumnName="Eredmeny" />
+                <ScalarProperty Name="Datum" ColumnName="Datum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kerdes">
+            <EntityTypeMapping TypeName="QuizDatabaseModel.Kerdes">
+              <MappingFragment StoreEntitySet="Kerdes">
+                <ScalarProperty Name="Helyes_valasz" ColumnName="Helyes_valasz" />
+                <ScalarProperty Name="Valasz_4" ColumnName="Valasz_4" />
+                <ScalarProperty Name="Valasz_3" ColumnName="Valasz_3" />
+                <ScalarProperty Name="Valasz_2" ColumnName="Valasz_2" />
+                <ScalarProperty Name="Valasz_1" ColumnName="Valasz_1" />
+                <ScalarProperty Name="Kerdes1" ColumnName="Kerdes" />
+                <ScalarProperty Name="Kerdes_Id" ColumnName="Kerdes_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

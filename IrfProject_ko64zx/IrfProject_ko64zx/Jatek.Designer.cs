@@ -48,6 +48,7 @@
             this.valasz1.Tag = "1";
             this.valasz1.Text = "A";
             this.valasz1.UseVisualStyleBackColor = true;
+            this.valasz1.Click += new System.EventHandler(this.valaszellenorzes);
             // 
             // valasz2
             // 
@@ -59,6 +60,7 @@
             this.valasz2.Tag = "2";
             this.valasz2.Text = "B";
             this.valasz2.UseVisualStyleBackColor = true;
+            this.valasz2.Click += new System.EventHandler(this.valaszellenorzes);
             // 
             // valasz3
             // 
@@ -70,6 +72,7 @@
             this.valasz3.Tag = "3";
             this.valasz3.Text = "C";
             this.valasz3.UseVisualStyleBackColor = true;
+            this.valasz3.Click += new System.EventHandler(this.valaszellenorzes);
             // 
             // valasz4
             // 
@@ -81,6 +84,7 @@
             this.valasz4.Tag = "4";
             this.valasz4.Text = "D";
             this.valasz4.UseVisualStyleBackColor = true;
+            this.valasz4.Click += new System.EventHandler(this.valaszellenorzes);
             // 
             // label1
             // 
@@ -122,7 +126,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(501, 308);
+            this.ClientSize = new System.Drawing.Size(684, 272);
             this.Controls.Add(this.startbtn);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);

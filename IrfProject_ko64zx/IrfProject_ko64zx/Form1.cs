@@ -12,8 +12,10 @@ namespace IrfProject_ko64zx
 {
     public partial class Quiz : Form
     {
+        QuizDatabaseEntities context = new QuizDatabaseEntities();
         public Quiz()
         {
+            
             InitializeComponent();
         }
 

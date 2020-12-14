@@ -12,9 +12,39 @@ namespace IrfProject_ko64zx
 {
     public partial class Jatek : Form
     {
+        QuizDatabaseEntities context = new QuizDatabaseEntities();
+        int helyesvalasz;
+        int kerdesid;
+        int pontok;
+        int szazalek;
+        
+
         public Jatek()
         {
             InitializeComponent();
+        }
+
+        private void valaszellenorzes(object sender, EventArgs e)
+        {
+            var v = (Button)sender;
+            int tag = Convert.ToByte(v.Tag);
+
+            if (tag == helyesvalasz)
+            {
+
+            }
+
+
+        }
+        private void kerdezes(int kerdesid)
+        {
+
+
+        }
+        private void kerdesgeneralas()
+        {
+            int maxid = context.Kerdes.Max(x => x.Kerdes_Id);
+
         }
     }
 }
