@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.valasz1 = new System.Windows.Forms.Button();
             this.valasz2 = new System.Windows.Forms.Button();
             this.valasz3 = new System.Windows.Forms.Button();
@@ -36,6 +37,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.startbtn = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.eredmenyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.eredmenyBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // valasz1
@@ -89,10 +93,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(192, 6);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.Location = new System.Drawing.Point(224, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 31);
+            this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Kérdés";
             this.label1.Visible = false;
@@ -121,12 +126,22 @@
             this.startbtn.TabIndex = 7;
             this.startbtn.Text = "START";
             this.startbtn.UseVisualStyleBackColor = true;
+            this.startbtn.Click += new System.EventHandler(this.startbtn_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 10000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // eredmenyBindingSource
+            // 
+            this.eredmenyBindingSource.DataSource = typeof(IrfProject_ko64zx.Eredmeny);
             // 
             // Jatek
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 272);
+            this.ClientSize = new System.Drawing.Size(735, 325);
             this.Controls.Add(this.startbtn);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
@@ -137,6 +152,7 @@
             this.Controls.Add(this.valasz1);
             this.Name = "Jatek";
             this.Text = "Jatek";
+            ((System.ComponentModel.ISupportInitialize)(this.eredmenyBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,5 +168,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button startbtn;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.BindingSource eredmenyBindingSource;
     }
 }
