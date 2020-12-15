@@ -16,7 +16,7 @@ namespace IrfProject_ko64zx
     {
         public int Eredmeny_Id { get; set; }
         public string Jatekos_nev { get; set; }
-        public Nullable<decimal> Eredmeny1 { get; set; }
+        public Nullable<int> Eredmeny1 { get; set; }
         public System.DateTime Datum { get; set; }
     }
 }

@@ -57,16 +57,15 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.kerdesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.kerdesDataGridView = new System.Windows.Forms.DataGridView();
-            this.Kerdes_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.kerdesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kerdesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.kerdesBindingNavigator)).BeginInit();
             this.kerdesBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kerdesDataGridView)).BeginInit();
@@ -175,7 +174,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(630, 23);
+            this.button1.Location = new System.Drawing.Point(630, 31);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(86, 73);
             this.button1.TabIndex = 13;
@@ -317,9 +316,9 @@
             // kerdesDataGridView
             // 
             this.kerdesDataGridView.AutoGenerateColumns = false;
+            this.kerdesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.kerdesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kerdesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Kerdes_Id,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
@@ -331,12 +330,6 @@
             this.kerdesDataGridView.Name = "kerdesDataGridView";
             this.kerdesDataGridView.Size = new System.Drawing.Size(749, 278);
             this.kerdesDataGridView.TabIndex = 14;
-            // 
-            // Kerdes_Id
-            // 
-            this.Kerdes_Id.DataPropertyName = "Kerdes_Id";
-            this.Kerdes_Id.HeaderText = "Kerdes_Id";
-            this.Kerdes_Id.Name = "Kerdes_Id";
             // 
             // button2
             // 
@@ -358,45 +351,45 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // kerdesBindingSource
+            // 
+            this.kerdesBindingSource.DataSource = typeof(IrfProject_ko64zx.Kerdes);
+            // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Kerdes1";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Kerdes1";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Kérdés";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "Valasz_1";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Valasz_1";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Válasz 1";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "Valasz_2";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Valasz_2";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Válasz 2";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Valasz_3";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Valasz_3";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Válasz 3";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Valasz_4";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Valasz_4";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Válasz 3";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "Helyes_valasz";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Helyes_valasz";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Helyes válasz";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // kerdesBindingSource
-            // 
-            this.kerdesBindingSource.DataSource = typeof(IrfProject_ko64zx.Kerdes);
             // 
             // Kerdesek
             // 
@@ -420,6 +413,7 @@
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Kerdesek";
             this.Text = "Kerdesek";
             ((System.ComponentModel.ISupportInitialize)(this.kerdesBindingNavigator)).EndInit();
@@ -462,14 +456,13 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton kerdesBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView kerdesDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Kerdes_Id;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
     }
 }

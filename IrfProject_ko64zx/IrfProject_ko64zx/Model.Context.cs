@@ -25,7 +25,7 @@ namespace IrfProject_ko64zx
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Eredmeny> Eredmeny { get; set; }
         public virtual DbSet<Kerdes> Kerdes { get; set; }
+        public virtual DbSet<Eredmeny> Eredmeny { get; set; }
     }
 }

@@ -15,7 +15,7 @@ namespace IrfProject_ko64zx
     {
         QuizDatabaseEntities context = new QuizDatabaseEntities();
         int helyesvalasz;
-        int kerdesid;
+        int jovalasz = 0;
         int pont = 0;
         
         int q_id;
@@ -37,7 +37,12 @@ namespace IrfProject_ko64zx
             
             if (tag == helyesvalasz)
             {
-                pont++;
+                pont = pont + 2;
+                jovalasz++;
+            }
+            else
+            {
+                pont = pont - 1;
             }
             kerdesgeneralas();
             
@@ -52,13 +57,22 @@ namespace IrfProject_ko64zx
 
             GetQuestionId();
             var q = context.Kerdes.Where(a => a.Kerdes_Id == q_id).SingleOrDefault();
+            if (q != null)
+            {
+                
+                label1.Text = q.Kerdes1;
+                valasz1.Text = q.Valasz_1;
+                valasz2.Text = q.Valasz_2;
+                valasz3.Text = q.Valasz_3;
+                valasz4.Text = q.Valasz_4;
+                helyesvalasz = q.Helyes_valasz;
+            }
+            else
+            {
+                kerdesgeneralas();
+                
+            }
             
-            label1.Text = q.Kerdes1;
-            valasz1.Text = q.Valasz_1;
-            valasz2.Text = q.Valasz_2;
-            valasz3.Text = q.Valasz_3;
-            valasz4.Text = q.Valasz_4;
-            helyesvalasz = q.Helyes_valasz;
 
         }
 
@@ -68,6 +82,8 @@ namespace IrfProject_ko64zx
             maxid = context.Kerdes.Max(x => x.Kerdes_Id);
 
             q_id = rnd.Next(1, maxid);
+            
+
         }
 
         private void startbtn_Click(object sender, EventArgs e)
@@ -97,9 +113,9 @@ namespace IrfProject_ko64zx
         {
             timer1.Enabled = false;
             DateTime dt = DateTime.Now;
-            MessageBox.Show("Kedves " + textBox1.Text + Environment.NewLine +
+            MessageBox.Show("Kedves " + textBox1.Text + "!"  +Environment.NewLine +
                 "A játékidő lejárt!" + Environment.NewLine +
-                "A játék során összesen " + pont + " kérdésre válaszoltál jól" + Environment.NewLine +
+                "A játék során összesen " + jovalasz + " kérdésre válaszoltál jól és" + pont + " pontot szereztél" + Environment.NewLine +
                 "Ha van kedved próbálkozz újra."
                 );
             Eredmeny ujeredmeny = new Eredmeny();
@@ -110,6 +126,7 @@ namespace IrfProject_ko64zx
             eredmenyBindingSource.EndEdit();
             context.SaveChanges();
             this.Close();
+            
         }
     }
 }

@@ -11,7 +11,7 @@
           </Key>
           <Property Name="Eredmeny_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Jatekos_nev" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Eredmeny" Type="numeric" Precision="3" Scale="2" />
+          <Property Name="Eredmeny" Type="int" />
           <Property Name="Datum" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="Kerdes">
@@ -34,18 +34,9 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QuizDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Eredmeny">
-          <Key>
-            <PropertyRef Name="Eredmeny_Id" />
-          </Key>
-          <Property Name="Eredmeny_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Jatekos_nev" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Eredmeny1" Type="Decimal" Precision="3" Scale="2" />
-          <Property Name="Datum" Type="DateTime" Nullable="false" Precision="3" />
-        </EntityType>
         <EntityContainer Name="QuizDatabaseEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Eredmeny" EntityType="Self.Eredmeny" />
           <EntitySet Name="Kerdes" EntityType="QuizDatabaseModel.Kerdes" />
+          <EntitySet Name="Eredmeny" EntityType="QuizDatabaseModel.Eredmeny" />
         </EntityContainer>
         <EntityType Name="Kerdes">
           <Key>
@@ -59,22 +50,21 @@
           <Property Name="Valasz_4" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Helyes_valasz" Type="Int32" Nullable="false" />
         </EntityType>
+        <EntityType Name="Eredmeny">
+          <Key>
+            <PropertyRef Name="Eredmeny_Id" />
+          </Key>
+          <Property Name="Eredmeny_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Jatekos_nev" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Eredmeny1" Type="Int32" />
+          <Property Name="Datum" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="QuizDatabaseModelStoreContainer" CdmEntityContainer="QuizDatabaseEntities">
-          <EntitySetMapping Name="Eredmeny">
-            <EntityTypeMapping TypeName="QuizDatabaseModel.Eredmeny">
-              <MappingFragment StoreEntitySet="Eredmeny">
-                <ScalarProperty Name="Eredmeny_Id" ColumnName="Eredmeny_Id" />
-                <ScalarProperty Name="Jatekos_nev" ColumnName="Jatekos_nev" />
-                <ScalarProperty Name="Eredmeny1" ColumnName="Eredmeny" />
-                <ScalarProperty Name="Datum" ColumnName="Datum" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Kerdes">
             <EntityTypeMapping TypeName="QuizDatabaseModel.Kerdes">
               <MappingFragment StoreEntitySet="Kerdes">
@@ -85,6 +75,16 @@
                 <ScalarProperty Name="Valasz_1" ColumnName="Valasz_1" />
                 <ScalarProperty Name="Kerdes1" ColumnName="Kerdes" />
                 <ScalarProperty Name="Kerdes_Id" ColumnName="Kerdes_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Eredmeny">
+            <EntityTypeMapping TypeName="QuizDatabaseModel.Eredmeny">
+              <MappingFragment StoreEntitySet="Eredmeny">
+                <ScalarProperty Name="Datum" ColumnName="Datum" />
+                <ScalarProperty Name="Eredmeny1" ColumnName="Eredmeny" />
+                <ScalarProperty Name="Jatekos_nev" ColumnName="Jatekos_nev" />
+                <ScalarProperty Name="Eredmeny_Id" ColumnName="Eredmeny_Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

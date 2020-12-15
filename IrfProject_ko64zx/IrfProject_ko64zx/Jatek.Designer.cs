@@ -45,7 +45,7 @@
             // valasz1
             // 
             this.valasz1.Enabled = false;
-            this.valasz1.Location = new System.Drawing.Point(32, 166);
+            this.valasz1.Location = new System.Drawing.Point(30, 118);
             this.valasz1.Name = "valasz1";
             this.valasz1.Size = new System.Drawing.Size(208, 55);
             this.valasz1.TabIndex = 0;
@@ -57,7 +57,7 @@
             // valasz2
             // 
             this.valasz2.Enabled = false;
-            this.valasz2.Location = new System.Drawing.Point(264, 166);
+            this.valasz2.Location = new System.Drawing.Point(262, 118);
             this.valasz2.Name = "valasz2";
             this.valasz2.Size = new System.Drawing.Size(208, 55);
             this.valasz2.TabIndex = 1;
@@ -69,7 +69,7 @@
             // valasz3
             // 
             this.valasz3.Enabled = false;
-            this.valasz3.Location = new System.Drawing.Point(32, 227);
+            this.valasz3.Location = new System.Drawing.Point(30, 179);
             this.valasz3.Name = "valasz3";
             this.valasz3.Size = new System.Drawing.Size(208, 55);
             this.valasz3.TabIndex = 3;
@@ -81,7 +81,7 @@
             // valasz4
             // 
             this.valasz4.Enabled = false;
-            this.valasz4.Location = new System.Drawing.Point(264, 227);
+            this.valasz4.Location = new System.Drawing.Point(262, 179);
             this.valasz4.Name = "valasz4";
             this.valasz4.Size = new System.Drawing.Size(208, 55);
             this.valasz4.TabIndex = 2;
@@ -92,14 +92,14 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(224, 9);
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.Size = new System.Drawing.Size(500, 51);
             this.label1.TabIndex = 4;
             this.label1.Text = "Kérdés";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Visible = false;
             // 
             // label2
@@ -130,7 +130,7 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 10000;
+            this.timer1.Interval = 60000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // eredmenyBindingSource
@@ -141,7 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(735, 325);
+            this.ClientSize = new System.Drawing.Size(500, 251);
             this.Controls.Add(this.startbtn);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
@@ -150,6 +150,7 @@
             this.Controls.Add(this.valasz4);
             this.Controls.Add(this.valasz2);
             this.Controls.Add(this.valasz1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Jatek";
             this.Text = "Jatek";
             ((System.ComponentModel.ISupportInitialize)(this.eredmenyBindingSource)).EndInit();
