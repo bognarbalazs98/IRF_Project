@@ -152,7 +152,7 @@
             this.btnRanglista.Name = "btnRanglista";
             this.btnRanglista.Size = new System.Drawing.Size(92, 41);
             this.btnRanglista.TabIndex = 8;
-            this.btnRanglista.Text = "Ranglista";
+            this.btnRanglista.Text = "Rekord";
             this.btnRanglista.UseVisualStyleBackColor = true;
             this.btnRanglista.Click += new System.EventHandler(this.btnRanglista_Click);
             // 

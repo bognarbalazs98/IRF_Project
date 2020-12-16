@@ -153,7 +153,7 @@ namespace IrfProject_ko64zx
         private void btnjatekszabaly_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Játékszabályok: " + Environment.NewLine +
-                "A játék során 1 peced van minél több kérdésre jól válazolni." + Environment.NewLine +
+                "A játék során 1 peced van minél több kérdésre jól válaszolni." + Environment.NewLine +
                 "Minden jó válasz esetén 2 pontot kapsz, míg rossz válasz esetén 1 pont kerül levonásra."
                 );
         }
