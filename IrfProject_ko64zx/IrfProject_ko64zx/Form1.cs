@@ -166,9 +166,9 @@ namespace IrfProject_ko64zx
             //            select y.Jatekos_nev.ToString();
            
 
-            MessageBox.Show("A jelenlegi rekord " + maxpoint + " pont. Próbáld megmedönteni!"  );
+            MessageBox.Show("A jelenlegi rekord " + maxpoint + " pont. Próbáld meg megdönteni!"  );
            
-            //eredmenyDataGridView.Sort(eredmenyDataGridView.Columns["Eredmeny1"], ListSortDirection.Ascending);
+            
         }
     }
 }
