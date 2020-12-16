@@ -107,7 +107,7 @@ namespace IrfProject_ko64zx
                 }
 
                 Kerdes ujkerdes = new Kerdes();
-                //ujkerdes.Kerdes_Id = context.Kerdes.Max(er => er.Kerdes_Id) + 1;
+                
                 ujkerdes.Kerdes1 = kerdestxt.Text;
                 ujkerdes.Valasz_1 = valasz1txt.Text;
                 ujkerdes.Valasz_2 = valasz2txt.Text;
@@ -285,11 +285,6 @@ namespace IrfProject_ko64zx
             CreateExcel();
         }
 
-        //private void KerdesListazas()
-        //{
-        //    var k = from x in context.Kerdes
-        //            select x;
-        //    kerdesDataGridView.DataSource = k.ToList();
-        //}
+     
     }
 }

@@ -47,11 +47,7 @@ namespace IrfProject_ko64zx
             kerdesgeneralas();
             
         }
-        private void kerdezes(int kerdesid)
-        {
-            
-
-        }
+        
         private void kerdesgeneralas()
         {
 
@@ -98,10 +94,10 @@ namespace IrfProject_ko64zx
                 label1.Visible = true;
                 textBox1.Visible = false;
                 label2.Visible = false;
-                valasz1.Enabled = true;
-                valasz2.Enabled = true;
-                valasz3.Enabled = true;
-                valasz4.Enabled = true;
+                valasz1.Visible = true;
+                valasz2.Visible = true;
+                valasz3.Visible = true;
+                valasz4.Visible = true;
                 timer1.Enabled = true;
                 startbtn.Visible = false;
             }
@@ -115,7 +111,7 @@ namespace IrfProject_ko64zx
             DateTime dt = DateTime.Now;
             MessageBox.Show("Kedves " + textBox1.Text + "!"  +Environment.NewLine +
                 "A játékidő lejárt!" + Environment.NewLine +
-                "A játék során összesen " + jovalasz + " kérdésre válaszoltál jól és" + pont + " pontot szereztél" + Environment.NewLine +
+                "A játék során összesen " + jovalasz + " kérdésre válaszoltál jól és " + pont + " pontot szereztél" + Environment.NewLine +
                 "Ha van kedved próbálkozz újra."
                 );
             Eredmeny ujeredmeny = new Eredmeny();

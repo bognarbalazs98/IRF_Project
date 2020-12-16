@@ -21,6 +21,7 @@ namespace IrfProject_ko64zx
         Excel.Application xlApp;
         Excel.Workbook xlWB;
         Excel.Worksheet xlSheet;
+        int maxpoint;
 
 
         public Quiz()
@@ -155,6 +156,19 @@ namespace IrfProject_ko64zx
                 "A játék során 1 peced van minél több kérdésre jól válazolni." + Environment.NewLine +
                 "Minden jó válasz esetén 2 pontot kapsz, míg rossz válasz esetén 1 pont kerül levonásra."
                 );
+        }
+
+        private void btnRanglista_Click(object sender, EventArgs e)
+        {
+            maxpoint = context.Eredmeny.Max(x => (int)x.Eredmeny1);
+            var champ = from y in context.Eredmeny
+                        where y.Eredmeny1 == maxpoint
+                        select y.Jatekos_nev.ToString();
+           
+
+            MessageBox.Show("A jelenlegi rekorder " + champ +", " + maxpoint + " ponttal."  );
+           
+            //eredmenyDataGridView.Sort(eredmenyDataGridView.Columns["Eredmeny1"], ListSortDirection.Ascending);
         }
     }
 }

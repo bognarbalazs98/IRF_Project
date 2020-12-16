@@ -44,7 +44,6 @@
             // 
             // valasz1
             // 
-            this.valasz1.Enabled = false;
             this.valasz1.Location = new System.Drawing.Point(30, 118);
             this.valasz1.Name = "valasz1";
             this.valasz1.Size = new System.Drawing.Size(208, 55);
@@ -52,11 +51,11 @@
             this.valasz1.Tag = "1";
             this.valasz1.Text = "A";
             this.valasz1.UseVisualStyleBackColor = true;
+            this.valasz1.Visible = false;
             this.valasz1.Click += new System.EventHandler(this.valaszellenorzes);
             // 
             // valasz2
             // 
-            this.valasz2.Enabled = false;
             this.valasz2.Location = new System.Drawing.Point(262, 118);
             this.valasz2.Name = "valasz2";
             this.valasz2.Size = new System.Drawing.Size(208, 55);
@@ -64,11 +63,11 @@
             this.valasz2.Tag = "2";
             this.valasz2.Text = "B";
             this.valasz2.UseVisualStyleBackColor = true;
+            this.valasz2.Visible = false;
             this.valasz2.Click += new System.EventHandler(this.valaszellenorzes);
             // 
             // valasz3
             // 
-            this.valasz3.Enabled = false;
             this.valasz3.Location = new System.Drawing.Point(30, 179);
             this.valasz3.Name = "valasz3";
             this.valasz3.Size = new System.Drawing.Size(208, 55);
@@ -76,11 +75,11 @@
             this.valasz3.Tag = "3";
             this.valasz3.Text = "C";
             this.valasz3.UseVisualStyleBackColor = true;
+            this.valasz3.Visible = false;
             this.valasz3.Click += new System.EventHandler(this.valaszellenorzes);
             // 
             // valasz4
             // 
-            this.valasz4.Enabled = false;
             this.valasz4.Location = new System.Drawing.Point(262, 179);
             this.valasz4.Name = "valasz4";
             this.valasz4.Size = new System.Drawing.Size(208, 55);
@@ -88,6 +87,7 @@
             this.valasz4.Tag = "4";
             this.valasz4.Text = "D";
             this.valasz4.UseVisualStyleBackColor = true;
+            this.valasz4.Visible = false;
             this.valasz4.Click += new System.EventHandler(this.valaszellenorzes);
             // 
             // label1
@@ -105,7 +105,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(115, 37);
+            this.label2.Location = new System.Drawing.Point(114, 69);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(262, 13);
             this.label2.TabIndex = 5;
@@ -113,14 +113,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(118, 54);
+            this.textBox1.Location = new System.Drawing.Point(117, 86);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(259, 20);
             this.textBox1.TabIndex = 6;
             // 
             // startbtn
             // 
-            this.startbtn.Location = new System.Drawing.Point(118, 94);
+            this.startbtn.Location = new System.Drawing.Point(117, 126);
             this.startbtn.Name = "startbtn";
             this.startbtn.Size = new System.Drawing.Size(259, 43);
             this.startbtn.TabIndex = 7;
