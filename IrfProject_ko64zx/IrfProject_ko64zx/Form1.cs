@@ -161,12 +161,12 @@ namespace IrfProject_ko64zx
         private void btnRanglista_Click(object sender, EventArgs e)
         {
             maxpoint = context.Eredmeny.Max(x => (int)x.Eredmeny1);
-            var champ = from y in context.Eredmeny
-                        where y.Eredmeny1 == maxpoint
-                        select y.Jatekos_nev.ToString();
+            //var champ = from y in context.Eredmeny
+            //            where y.Eredmeny1 == maxpoint
+            //            select y.Jatekos_nev.ToString();
            
 
-            MessageBox.Show("A jelenlegi rekorder " + champ +", " + maxpoint + " ponttal."  );
+            MessageBox.Show("A jelenlegi rekord " + maxpoint + " pont. Próbáld megmedönteni!"  );
            
             //eredmenyDataGridView.Sort(eredmenyDataGridView.Columns["Eredmeny1"], ListSortDirection.Ascending);
         }
